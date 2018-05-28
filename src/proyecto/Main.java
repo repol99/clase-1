@@ -12,11 +12,12 @@ public class Main {
 		p.setCodigo("myCode");
 		p.setName("martillo");
 		lstObjects.add(p);
-		
+/*		
 		Customer c = new Customer();
 		c.setRut("1.9");
 		c.setName("Don pepe");
 		lstObjects.add(c);
+*/
 		
 		Employee e = new Employee();
 		e.setRut("2.7");
@@ -31,5 +32,11 @@ public class Main {
 		for( IMyDate cur : lstObjects) {
 			System.out.println(cur.getname());
 		}
+		
+		WebServiceMock wsm = new WebServiceMock();
+		
+		Customer cc = new Customer(wsm);
+		System.out.println(cc.getAmount());
+		
 	}
 }
